@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* --- Root Variables for Theme --- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --background-color: #f4f6fa;
+  --card-background: #ffffff;
+  --text-color: #333;
+  --subtle-text-color: #555;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --default-border-radius: 10px;
+}
+
+/* --- Global Reset & Body Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  /* Changed to stack the header and main content vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- New Top-Level Header --- */
+.page-header {
+  text-align: center;
+  margin-bottom: 30px; /* Space between title and the main content */
+}
+
+/* --- Main Layout Container --- */
+.event-page {
+  display: flex;
+  align-items: stretch;
+  gap: 50px; /* Increased gap to push columns apart */
+  width: 100%;
+  max-width: 1200px; /* Increased width for a wider layout */
+  height: 80vh; /* Adjusted height to account for the new header */
+  max-height: 700px;
+}
+
+/* --- Left & Right Column Containers --- */
+.left-side, .right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.right-side {
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- 6-Image Collage (Left Side) --- */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 100%;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--default-border-radius);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Form Container (Right Side) --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: var(--default-border-radius);
+  box-shadow: 0 5px 20px var(--shadow-color);
+  width: 100%;
+  justify-content: center; /* Ensures form content is centered vertically */
+  height: 100%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  /* text-align is now handled by .page-header */
+}
+
+.subheading {
+  color: var(--subtle-text-color);
+  margin-bottom: 20px;
+  /* text-align is now handled by .page-header */
+}
+
+/* --- Form Inputs & Select --- */
+.input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--border-color);
+  background-color: #fdfdfd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Submit Button --- */
+.Proceed {
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: var(--default-border-radius);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.Proceed:hover {
+  background: var(--primary-hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* --- Error Message Styling --- */
+.error-message {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border: 1px solid #D8000C;
+  border-radius: var(--default-border-radius);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/themes/background.jpg'); /* Your background image */
+  background-size: cover;      /* Make it cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  height: 100vh;               /* Full viewport height */
+  overflow: hidden;            /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
