@@ -1,16 +1,54 @@
-# React + Vite
+💡 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eventify is an AI-powered dynamic event planning web app that helps users organize events such as weddings, birthdays, and farewells based on their budget and preferences.
+Users simply enter their budget, event name, and number of guests, and Eventify intelligently generates adaptive forms to choose options like decoration type, catering, and venue style.
+The built-in AI logic then analyzes the inputs to suggest whether the budget is sufficient, needs upgrading, or can be optimized — helping users plan efficiently and stay within limits.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧠 AI-Powered Budget Advisor: Suggests event setups and evaluates if your budget is suitable or needs adjustments.
 
-## React Compiler
+🎊 Dynamic Event Options: Choose from weddings, birthdays, farewells, and more.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🧾 Adaptive Multi-Step Forms: Each event type has its own unique form with related fields (decor, catering, etc.).
 
-## Expanding the ESLint configuration
+🔐 Firebase Authentication: Secure user login and account management.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+☁️ Realtime Firestore Database: Stores user preferences, event data, and budget details.
+
+💸 Smart Budget Optimization: Gives AI-generated feedback on upgrade or downgrade options.
+
+📱 Responsive React UI: Works flawlessly across mobile, tablet, and desktop devices.
+
+⚡ Deployed on Vercel: Lightning-fast performance and zero downtime.
+
+
+🛠️ Tech Stack
+Category	Technology
+Frontend	React.js, HTML, CSS, JavaScript
+Backend Logic	React State Management, Custom AI Logic
+Database	Firebase Firestore
+Authentication	Firebase Auth
+Hosting	Vercel
+Version Control	Git, GitHub
+
+⚙️ How It Works
+
+User enters event name, budget, and number of people.
+
+Selects event type → e.g. Wedding.
+
+Eventify displays a dynamic form to select options like decoration style, food type, and venue preferences.
+
+AI logic processes data and:
+
+✅ Confirms if the current budget fits, or
+
+⚠️ Suggests upgrading or optimizing the plan.
+
+User can dynamically adjust options and see real-time feedback.
+
+Data is stored securely in Firebase for future access.
+
+
+
