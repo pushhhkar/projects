@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/Wedding.css"; // Reuse the same styles
+import "../styles/Wedding.css"; 
 
 export default function Summary({ data }) {
   const { theme, venue, catering, decor, budgetSplit, suggestion, name, budget, guests } = data;
 
-  // Theme images
+  
   const themeImages = {
     Royal: ["/themes/royal.jpg", "/themes/royal2.jpg"],
     Traditional: ["/themes/traditional.jpg", "/themes/traditional2.jpg"],
@@ -50,13 +50,13 @@ export default function Summary({ data }) {
     const selectedCost = costs[selected] || 0;
 
     if (selectedCost > budget) {
-      // Suggest lower-cost option
+      
       for (let option of Object.keys(costs)) {
         if (costs[option] <= budget) return option;
       }
       return "Not Available";
     } else {
-      // Suggest higher-cost option if possible
+      
       let betterOption = selected;
       for (let option of Object.keys(costs)) {
         if (costs[option] > selectedCost && costs[option] <= budget) {

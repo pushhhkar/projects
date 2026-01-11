@@ -1,5 +1,3 @@
-// src/components/Navbar.jsx
-
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -33,15 +31,15 @@ const Navbar = () => {
         padding: "1rem 2rem",
       }}
     >
-      {/* Brand Name Link */}
+      
       <Link to="/" style={{ textDecoration: "none", color: "white" }}>
         <h2 style={{ fontWeight: "bold", margin: 0 }}>Eventify</h2>
       </Link>
       
-      {/* Container for all right-side links */}
+      
       <div style={{ display: 'flex', alignItems: 'center' }}>
         
-        {/* --- About Us Link --- */}
+        
         <Link 
           to="/about" 
           style={{ 

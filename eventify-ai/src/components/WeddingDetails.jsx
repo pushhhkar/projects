@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Summary from "./Summary"; // Summary page
+import Summary from "./Summary"; 
 import "../styles/Wedding.css";
 
 export default function WeddingDetails({ formData }) {
@@ -13,7 +13,7 @@ export default function WeddingDetails({ formData }) {
   const [guestCount, setGuestCount] = useState(formData.guests);
   const [budget, setBudget] = useState(formData.budget);
 
-  // Venues per theme
+ 
   const venueOptions = {
     Royal: ["Udaipur Palace", "Jaipur Fort", "Mysore Palace"],
     Traditional: ["Banaras Heritage Hall", "Rajasthan Haveli", "Temple Courtyard"],
@@ -21,7 +21,7 @@ export default function WeddingDetails({ formData }) {
     Beach: ["Goa Beach Resort", "Pondicherry Seaside Venue", "Kovalam Bay Resort"],
   };
 
-  // Theme images
+ 
   const themeImages = {
     Royal: ["/themes/royal.jpg", "/themes/royal2.jpg"],
     Traditional: ["/themes/traditional.jpg", "/themes/traditional2.jpg"],

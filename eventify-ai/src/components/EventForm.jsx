@@ -6,7 +6,7 @@ export default function EventForm(props) {
   const [budget, setBudget] = useState("");
   const [guests, setGuests] = useState("");
   const [eventType, setEventType] = useState("Wedding");
-  const [error, setError] = useState(""); // State for handling error messages
+  const [error, setError] = useState(""); 
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent page reload
